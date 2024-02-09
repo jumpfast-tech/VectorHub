@@ -138,13 +138,13 @@
   },
   "doc_size": {
     "bytes": 16000000,
-    "unlimited": false,
+    "unlimited": true,
     "source_url": "https://learn.microsoft.com/azure/search/search-limits-quotas-capacity",
     "comment": "Limited by batch size. However, the maximum size of a document is 16 MB. There is no max document limit per index."
   },
   "vector_dims": {
     "value": 2048,
-    "unlimited": false,
+    "unlimited": true,
     "source_url": "https://learn.microsoft.com/azure/search/vector-search-how-to-generate-embeddings",
     "comment": ""
   },

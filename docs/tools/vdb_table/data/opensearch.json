@@ -138,13 +138,13 @@
   },
   "doc_size": {
     "bytes": 100000000,
-    "unlimited": false,
+    "unlimited": true,
     "source_url": "",
     "comment": ""
   },
   "vector_dims": {
     "value": 10000,
-    "unlimited": false,
+    "unlimited": true,
     "source_url": "https://opensearch.org/docs/2.0/search-plugins/knn/approximate-knn/",
     "comment": ""
   },

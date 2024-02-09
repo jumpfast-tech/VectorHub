@@ -138,13 +138,13 @@
   },
   "doc_size": {
     "bytes": 40000,
-    "unlimited": false,
+    "unlimited": true,
     "source_url": "https://docs.pinecone.io/docs/limits",
     "comment": ""
   },
   "vector_dims": {
     "value": 20000,
-    "unlimited": false,
+    "unlimited": true,
     "source_url": "https://docs.pinecone.io/docs/limits",
     "comment": ""
   },

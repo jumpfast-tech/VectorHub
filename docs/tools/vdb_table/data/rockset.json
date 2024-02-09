@@ -138,13 +138,13 @@
   },
   "doc_size": {
     "bytes": 41943040,
-    "unlimited": false,
+    "unlimited": true,
     "source_url": "https://docs.rockset.com/documentation/docs/debugging#document-size-is-too-large",
     "comment": ""
   },
   "vector_dims": {
     "value": 0,
-    "unlimited": false,
+    "unlimited": true,
     "source_url": "",
     "comment": ""
   },
