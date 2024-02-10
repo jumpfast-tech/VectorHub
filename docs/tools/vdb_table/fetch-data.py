@@ -11,6 +11,7 @@ DIRECTORY = "docs/tools/vdb_table/data"
 GITHUB_API_URL = "https://api.github.com/repos/"
 DOCKER_HUB_API_URL = "https://hub.docker.com/v2/repositories/"
 NPM_API_URL = "https://api.npmjs.org/downloads/point/"
+PYPI_API_URL = "https://api.pepy.tech/api/v2/projects"
 
 
 def get_github_stars(github_url, headers=None):
@@ -41,7 +42,6 @@ def get_docker_pulls(namespace, repo_name, headers=None):
 
 def get_npm_package_info(npm_package):
     response = requests.get(f"https://registry.npmjs.org/{npm_package}")
-    print(f"https://registry.npmjs.org/{npm_package}")
     if response.status_code == 200:
         data = response.json()
         first_release_date = data.get("time")['created']
@@ -54,6 +54,7 @@ def get_npm_package_info(npm_package):
 
 
 def get_npm_downloads(npm_package, headers=None, start_date=None):
+    global NPM_API_URL
     if start_date is None:
         release_date = get_npm_package_info(npm_package)
         if release_date:
@@ -62,7 +63,7 @@ def get_npm_downloads(npm_package, headers=None, start_date=None):
 
     start_date = start_date.strftime("%Y-%m-%d")
     end_date = (datetime.now() + + timedelta(days=1)).strftime("%Y-%m-%d")
-    response = requests.get(f"{NPM_API_URL}{start_date}:{end_date}/{npm_package}")
+    response = requests.get(f"{NPM_API_URL}{start_date}:{end_date}/{npm_package}", headers)
     if response.status_code == 200:
         return response.json()["downloads"]
     else:
@@ -70,9 +71,25 @@ def get_npm_downloads(npm_package, headers=None, start_date=None):
             f"Failed to fetch npm downloads for {npm_package}: {response.status_code}"
         )
         return None
+    
+
+def get_pypi_downloads(pypi_package, headers=None):
+    global PYPI_API_URL
+    headers['X-Api-Key'] = os.getenv('PYPI_X_API_KEY', '')
+    response = requests.get(f"{PYPI_API_URL}/{pypi_package}", headers=headers)
+    if response.status_code == 200:
+        return response.json()["total_downloads"]
+    else:
+        print(
+            f"Failed to fetch pypi downloads for {pypi_package}: {response.status_code}"
+        )
+        return None
 
 
 def update_json_files(directory, headers=None):
+    if headers is None:
+        headers = {}
+
     for filename in os.listdir(directory):
         if filename.endswith(".json"):
             file_path = os.path.join(directory, filename)
@@ -81,6 +98,8 @@ def update_json_files(directory, headers=None):
                 github_url = data.get("github_stars", {}).get("source_url", "")
                 dockerhub_url = data.get("docker_pulls", {}).get("source_url", "")
                 npm_url = data.get("npm_downloads", {}).get("source_url", "")
+                pypi_url = data.get("pypi_downloads", {}).get("source_url", "")
+
                 if dockerhub_url:
                     parsed_dockerhub_path = str(urlparse(dockerhub_url).path)
                     docker_namespace = (
@@ -94,7 +113,7 @@ def update_json_files(directory, headers=None):
                     pulls = get_docker_pulls(docker_namespace, docker_repo_name)
                     if pulls is not None:
                         data["docker_pulls"]["value"] = pulls
-                    data["docker_pulls"]["value_90_days"] = downloads
+                    data["docker_pulls"]["value_90_days"] = 0
 
                 if github_url:
                     stars = get_github_stars(github_url, headers)
@@ -112,6 +131,13 @@ def update_json_files(directory, headers=None):
                     downloads = get_npm_downloads(npm_package_name, headers, start_date)
                     if downloads is not None:
                         data["npm_downloads"]["value_90_days"] = downloads
+            
+                if pypi_url:
+                    pypi_package_name = list(pypi_url.split('https://pypi.org/project/'))[1].strip().strip('/')
+                    downloads = get_pypi_downloads(pypi_package_name, headers)
+                    if downloads is not None:
+                        data["pypi_downloads"]["value"] = downloads
+                    data["pypi_downloads"]["value_90_days"] = 0
 
                 # Write the updated data back to the file
                 json_file.seek(0)  # Rewind to the start of the file
