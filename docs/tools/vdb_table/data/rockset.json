@@ -170,6 +170,7 @@
     "value": 9933,
     "unlimited": false,
     "source_url": "https://www.npmjs.com/package/rockset",
-    "comment": ""
+    "comment": "",
+    "value_90_days": 1448
   }
 }

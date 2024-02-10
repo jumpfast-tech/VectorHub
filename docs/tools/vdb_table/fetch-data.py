@@ -62,7 +62,6 @@ def get_npm_downloads(npm_package, headers=None, start_date=None):
 
     start_date = start_date.strftime("%Y-%m-%d")
     end_date = (datetime.now() + + timedelta(days=1)).strftime("%Y-%m-%d")
-    print(start_date, end_date)
     response = requests.get(f"{NPM_API_URL}{start_date}:{end_date}/{npm_package}")
     if response.status_code == 200:
         return response.json()["downloads"]
@@ -83,7 +82,6 @@ def update_json_files(directory, headers=None):
                 dockerhub_url = data.get("docker_pulls", {}).get("source_url", "")
                 npm_url = data.get("npm_downloads", {}).get("source_url", "")
                 if dockerhub_url:
-                    print(dockerhub_url)
                     parsed_dockerhub_path = str(urlparse(dockerhub_url).path)
                     docker_namespace = (
                         list(parsed_dockerhub_path.strip().split("/"))[-2]
@@ -101,16 +99,13 @@ def update_json_files(directory, headers=None):
                     if stars is not None:
                         data["github_stars"]["value"] = stars
                 if npm_url:
-                    print(file_path)
-                    npm_path = str(urlparse(npm_url).path)
-                    npm_package_name = list(npm_path.strip().split("/"))[-1]
+                    npm_package_name = list(npm_url.split('https://www.npmjs.com/package/'))[1].strip()
                     downloads = get_npm_downloads(npm_package_name, headers)
                     if downloads is not None:
                         data["npm_downloads"]["value"] = downloads
 
                     start_date = datetime.now() - timedelta(days=90)
                     downloads = get_npm_downloads(npm_package_name, headers, start_date)
-                    print(downloads)
                     if downloads is not None:
                         data["npm_downloads"]["value_90_days"] = downloads
 

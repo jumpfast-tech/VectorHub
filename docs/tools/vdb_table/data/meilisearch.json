@@ -149,7 +149,7 @@
     "comment": ""
   },
   "github_stars": {
-    "value": 41669,
+    "value": 41687,
     "unlimited": false,
     "source_url": "https://github.com/meilisearch/meilisearch",
     "comment": ""
@@ -170,6 +170,7 @@
     "value": 5975201,
     "unlimited": false,
     "source_url": "https://www.npmjs.com/package/meilisearch",
-    "comment": ""
+    "comment": "",
+    "value_90_days": 762634
   }
 }

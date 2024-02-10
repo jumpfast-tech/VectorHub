@@ -149,13 +149,13 @@
     "comment": ""
   },
   "github_stars": {
-    "value": 66691,
+    "value": 66698,
     "unlimited": false,
     "source_url": "https://github.com/elastic/elasticsearch",
     "comment": ""
   },
   "docker_pulls": {
-    "value": 824352010,
+    "value": 824572564,
     "unlimited": false,
     "source_url": "https://hub.docker.com/_/elasticsearch",
     "comment": ""
@@ -167,10 +167,10 @@
     "comment": ""
   },
   "npm_downloads": {
-    "value": 19139199,
+    "value": 62485139,
     "unlimited": false,
     "source_url": "https://www.npmjs.com/package/@elastic/elasticsearch",
     "comment": "",
-    "value_90_days": 2781442
+    "value_90_days": 11098345
   }
 }

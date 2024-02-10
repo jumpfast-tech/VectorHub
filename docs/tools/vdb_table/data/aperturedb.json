@@ -163,7 +163,7 @@
   "pypi_downloads": {
     "value": 0,
     "unlimited": false,
-    "source_url": "https://pypi.org/project/aperturedb/",
+    "source_url": "https://github.com/aperture-data/aperturedb-python",
     "comment": ""
   },
   "npm_downloads": {
