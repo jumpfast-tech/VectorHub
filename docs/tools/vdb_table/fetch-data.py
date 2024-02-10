@@ -41,11 +41,10 @@ def get_docker_pulls(namespace, repo_name, headers=None):
 
 def get_npm_package_info(npm_package):
     response = requests.get(f"https://registry.npmjs.org/{npm_package}")
+    print(f"https://registry.npmjs.org/{npm_package}")
     if response.status_code == 200:
         data = response.json()
-        release_dates = list(data.get("time").keys())
-        release_dates.sort()
-        first_release_date = release_dates[1]
+        first_release_date = data.get("time")['created']
         return first_release_date
     else:
         print(
@@ -54,23 +53,23 @@ def get_npm_package_info(npm_package):
         return None
 
 
-def get_npm_downloads(npm_package):
-    release_date = get_npm_package_info(npm_package)
-    if release_date:
-        # Subtract one day from the release date for the start range
-        start_date = (
-            datetime.strptime(release_date, "%Y-%m-%d") - timedelta(days=1)
-        ).strftime("%Y-%m-%d")
-        end_date = datetime.now().strftime("%Y-%m-%d")
-        response = requests.get(f"{NPM_API_URL}{start_date}:{end_date}/{npm_package}")
-        if response.status_code == 200:
-            return response.json()["downloads"]
-        else:
-            print(
-                f"Failed to fetch npm downloads for {npm_package}: {response.status_code}"
-            )
-            return None
+def get_npm_downloads(npm_package, headers=None, start_date=None):
+    if start_date is None:
+        release_date = get_npm_package_info(npm_package)
+        if release_date:
+            # Subtract one day from the release date for the start range
+            start_date = datetime.strptime(release_date, "%Y-%m-%dT%H:%M:%S.%fZ") - timedelta(days=1)
+
+    start_date = start_date.strftime("%Y-%m-%d")
+    end_date = (datetime.now() + + timedelta(days=1)).strftime("%Y-%m-%d")
+    print(start_date, end_date)
+    response = requests.get(f"{NPM_API_URL}{start_date}:{end_date}/{npm_package}")
+    if response.status_code == 200:
+        return response.json()["downloads"]
     else:
+        print(
+            f"Failed to fetch npm downloads for {npm_package}: {response.status_code}"
+        )
         return None
 
 
@@ -82,7 +81,7 @@ def update_json_files(directory, headers=None):
                 data = json.load(json_file)
                 github_url = data.get("github_stars", {}).get("source_url", "")
                 dockerhub_url = data.get("docker_pulls", {}).get("source_url", "")
-                npm_package = data.get("npm_downloads", {})
+                npm_url = data.get("npm_downloads", {}).get("source_url", "")
                 if dockerhub_url:
                     print(dockerhub_url)
                     parsed_dockerhub_path = str(urlparse(dockerhub_url).path)
@@ -101,11 +100,19 @@ def update_json_files(directory, headers=None):
                     stars = get_github_stars(github_url, headers)
                     if stars is not None:
                         data["github_stars"]["value"] = stars
-                # npm
-                if npm_package:
-                    downloads = get_npm_downloads(npm_package)
+                if npm_url:
+                    print(file_path)
+                    npm_path = str(urlparse(npm_url).path)
+                    npm_package_name = list(npm_path.strip().split("/"))[-1]
+                    downloads = get_npm_downloads(npm_package_name, headers)
                     if downloads is not None:
-                        data["npm_downloads"] = downloads
+                        data["npm_downloads"]["value"] = downloads
+
+                    start_date = datetime.now() - timedelta(days=90)
+                    downloads = get_npm_downloads(npm_package_name, headers, start_date)
+                    print(downloads)
+                    if downloads is not None:
+                        data["npm_downloads"]["value_90_days"] = downloads
 
                 # Write the updated data back to the file
                 json_file.seek(0)  # Rewind to the start of the file
