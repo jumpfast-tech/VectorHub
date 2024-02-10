@@ -138,7 +138,7 @@
   },
   "doc_size": {
     "bytes": 0,
-    "unlimited": true,
+    "unlimited": false,
     "source_url": "",
     "comment": ""
   },
@@ -170,6 +170,7 @@
     "value": 0,
     "unlimited": false,
     "source_url": "",
-    "comment": ""
+    "comment": "",
+    "value_90_days": 0
   }
 }
