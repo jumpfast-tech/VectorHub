@@ -94,10 +94,14 @@ def update_json_files(directory, headers=None):
                     pulls = get_docker_pulls(docker_namespace, docker_repo_name)
                     if pulls is not None:
                         data["docker_pulls"]["value"] = pulls
+                    data["docker_pulls"]["value_90_days"] = downloads
+
                 if github_url:
                     stars = get_github_stars(github_url, headers)
                     if stars is not None:
                         data["github_stars"]["value"] = stars
+                    data["github_stars"]["value_90_days"] = 0
+
                 if npm_url:
                     npm_package_name = list(npm_url.split('https://www.npmjs.com/package/'))[1].strip()
                     downloads = get_npm_downloads(npm_package_name, headers)
