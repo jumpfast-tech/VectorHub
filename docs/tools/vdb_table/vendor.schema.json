@@ -36,8 +36,8 @@
     "vector_dims": {"allOf": [{"$ref": "#/$defs/integerWithSource"}], "$comment": "Ops | Vector Dims | Maximum number of vector dimensions." },
     "github_stars": {"allOf": [{"$ref": "#/$defs/integerWithSource"}], "$comment": "Stats | GitHub ⭐ | The number of stars for the core product repository." },
     "docker_pulls": {"allOf": [{"$ref": "#/$defs/integerWithSource"}],"$comment": "Stats | Docker Pulls | The number of pulls for the core product's docker image." },
-    "pypi_downloads": {"allOf": [{"$ref": "#/$defs/integerWithSource"}], "$comment": "Stats | PyPi Downlaods | The number of downloads for the core product's python package." },
-    "npm_downloads": {"allOf": [{"$ref": "#/$defs/integerWithSource"}], "$comment": "Stats | NPM Downloads | The number of downloads for the core product's NPM package." }
+    "pypi_downloads": {"allOf": [{"$ref": "#/$defs/statsWithSource"}], "$comment": "Stats | PyPi Downlaods | The number of downloads for the core product's python package." },
+    "npm_downloads": {"allOf": [{"$ref": "#/$defs/statsWithSource"}], "$comment": "Stats | NPM Downloads | The number of downloads for the core product's NPM package." }
   },
 
   "$defs": {
@@ -102,6 +102,17 @@
       "type": "object",
       "properties": {
         "value": {"type": "integer"},
+        "unlimited": {"type": "boolean"},
+        "source_url": {"type": "string"},
+        "comment": {"type":"string"}
+      }
+    },
+    "statsWithSource": {
+      "$id": "statsWithSource",
+      "type": "object",
+      "properties": {
+        "value": {"type": "integer"},
+        "value_90_days": {"type": "integer"},
         "unlimited": {"type": "boolean"},
         "source_url": {"type": "string"},
         "comment": {"type":"string"}
