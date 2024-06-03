@@ -149,7 +149,7 @@
     "comment": ""
   },
   "github_stars": {
-    "value": 8166,
+    "value": 8188,
     "source_url": "https://github.com/oramasearch/orama",
     "comment": "",
     "value_90_days": 0
@@ -167,9 +167,9 @@
     "value_90_days": 0
   },
   "npm_downloads": {
-    "value": 616901,
+    "value": 643086,
     "source_url": "https://www.npmjs.com/package/@orama/orama",
     "comment": "",
-    "value_90_days": 254182
+    "value_90_days": 268199
   }
 }
