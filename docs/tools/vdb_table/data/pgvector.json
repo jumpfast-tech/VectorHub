@@ -149,7 +149,7 @@
     "comment": ""
   },
   "github_stars": {
-    "value": 13405,
+    "value": 13560,
     "source_url": "https://github.com/pgvector/pgvector",
     "comment": "",
     "value_90_days": 0
@@ -164,12 +164,12 @@
     "value": 3139282,
     "source_url": "https://pypi.org/project/pgvector/",
     "comment": "",
-    "value_90_days": 10292228
+    "value_90_days": 10581063
   },
   "npm_downloads": {
-    "value": 1958170,
+    "value": 2016090,
     "source_url": "https://www.npmjs.com/package/pgvector",
     "comment": "",
-    "value_90_days": 600073
+    "value_90_days": 613095
   }
 }
