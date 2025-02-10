@@ -164,12 +164,12 @@
     "value": 10342315,
     "source_url": "https://pypi.org/project/pinecone-client/",
     "comment": "",
-    "value_90_days": 9861923
+    "value_90_days": 9592227
   },
   "npm_downloads": {
-    "value": 11264968,
+    "value": 11460570,
     "source_url": "https://www.npmjs.com/package/@pinecone-database/pinecone",
     "comment": "",
-    "value_90_days": 2132750
+    "value_90_days": 2300630
   }
 }
