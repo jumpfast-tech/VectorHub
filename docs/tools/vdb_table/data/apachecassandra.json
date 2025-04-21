@@ -149,13 +149,13 @@
     "comment": ""
   },
   "github_stars": {
-    "value": 9128,
+    "value": 9147,
     "source_url": "https://github.com/apache/cassandra",
     "comment": "",
     "value_90_days": 0
   },
   "docker_pulls": {
-    "value": 220671428,
+    "value": 220848366,
     "source_url": "https://hub.docker.com/_/cassandra",
     "comment": "",
     "value_90_days": 0
@@ -164,12 +164,12 @@
     "value": 68293851,
     "source_url": "https://pypi.org/project/cassandra-driver/",
     "comment": "",
-    "value_90_days": 11518768
+    "value_90_days": 11939040
   },
   "npm_downloads": {
-    "value": 5190497,
+    "value": 5194571,
     "source_url": "https://www.npmjs.com/package/cassandra-driver",
     "comment": "",
-    "value_90_days": 1000021
+    "value_90_days": 992071
   }
 }
