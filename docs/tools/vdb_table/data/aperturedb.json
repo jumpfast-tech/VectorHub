@@ -164,12 +164,12 @@
     "value": 119082,
     "source_url": "https://pypi.org/project/aperturedb/",
     "comment": "",
-    "value_90_days": 27943
+    "value_90_days": 27683
   },
   "npm_downloads": {
-    "value": 13878,
+    "value": 14044,
     "source_url": "https://www.npmjs.com/package/aperture",
     "comment": "",
-    "value_90_days": 2289
+    "value_90_days": 2669
   }
 }

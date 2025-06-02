@@ -154,13 +154,13 @@
     "comment": ""
   },
   "github_stars": {
-    "value": 72768,
+    "value": 72833,
     "source_url": "https://github.com/elastic/elasticsearch",
     "comment": "",
     "value_90_days": 0
   },
   "docker_pulls": {
-    "value": 907848388,
+    "value": 908569605,
     "source_url": "https://hub.docker.com/_/elasticsearch",
     "comment": "",
     "value_90_days": 0
@@ -169,12 +169,12 @@
     "value": 673773110,
     "source_url": "https://pypi.org/project/elasticsearch/",
     "comment": "",
-    "value_90_days": 104800188
+    "value_90_days": 106420852
   },
   "npm_downloads": {
-    "value": 82265803,
+    "value": 82477636,
     "source_url": "https://www.npmjs.com/package/@elastic/elasticsearch",
     "comment": "",
-    "value_90_days": 16205318
+    "value_90_days": 16178722
   }
 }
