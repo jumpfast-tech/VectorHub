@@ -154,13 +154,13 @@
     "comment": ""
   },
   "github_stars": {
-    "value": 11416,
+    "value": 11454,
     "source_url": "https://github.com/opensearch-project/OpenSearch",
     "comment": "",
     "value_90_days": 0
   },
   "docker_pulls": {
-    "value": 122221180,
+    "value": 123312781,
     "source_url": "https://hub.docker.com/r/opensearchproject/opensearch",
     "comment": "",
     "value_90_days": 0
@@ -169,12 +169,12 @@
     "value": 315283,
     "source_url": "https://pypi.org/project/opensearch/",
     "comment": "",
-    "value_90_days": 22260
+    "value_90_days": 23227
   },
   "npm_downloads": {
-    "value": 39860992,
+    "value": 40233456,
     "source_url": "https://www.npmjs.com/package/@opensearch-project/opensearch",
     "comment": "",
-    "value_90_days": 9030663
+    "value_90_days": 9071888
   }
 }
