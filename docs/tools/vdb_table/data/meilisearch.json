@@ -164,12 +164,12 @@
     "value": 810833,
     "source_url": "https://pypi.org/project/meilisearch/",
     "comment": "",
-    "value_90_days": 2499570
+    "value_90_days": 2519264
   },
   "npm_downloads": {
-    "value": 8644708,
+    "value": 9218668,
     "source_url": "https://www.npmjs.com/package/meilisearch",
     "comment": "",
-    "value_90_days": 1948550
+    "value_90_days": 2169846
   }
 }
