@@ -164,12 +164,12 @@
     "value": 12766884,
     "source_url": "https://pypi.org/project/azure-ai-ml/",
     "comment": "",
-    "value_90_days": 7323831
+    "value_90_days": 7404920
   },
   "npm_downloads": {
-    "value": 15655368,
+    "value": 15735339,
     "source_url": "https://www.npmjs.com/package/@azure/openai",
     "comment": "",
-    "value_90_days": 2995295
+    "value_90_days": 2982454
   }
 }
