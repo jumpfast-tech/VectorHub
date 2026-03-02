@@ -167,9 +167,9 @@
     "value_90_days": 0
   },
   "npm_downloads": {
-    "value": 1393,
+    "value": 1263,
     "source_url": "https://www.npmjs.com/package/@vectara/create-ui",
     "comment": "",
-    "value_90_days": 264
+    "value_90_days": 277
   }
 }
