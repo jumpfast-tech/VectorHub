@@ -149,7 +149,7 @@
     "comment": ""
   },
   "github_stars": {
-    "value": 26396,
+    "value": 26660,
     "source_url": "https://github.com/chroma-core/chroma",
     "comment": "",
     "value_90_days": 0
@@ -164,12 +164,12 @@
     "value": 8948550,
     "source_url": "https://pypi.org/project/chromadb/",
     "comment": "",
-    "value_90_days": 30392437
+    "value_90_days": 33598974
   },
   "npm_downloads": {
-    "value": 5223046,
+    "value": 5512997,
     "source_url": "https://www.npmjs.com/package/chromadb",
     "comment": "",
-    "value_90_days": 1378161
+    "value_90_days": 1580693
   }
 }
