@@ -154,7 +154,7 @@
     "comment": "via Scalar Quantization of index"
   },
   "github_stars": {
-    "value": 30446,
+    "value": 31380,
     "source_url": "https://github.com/qdrant/qdrant",
     "comment": "",
     "value_90_days": 0
@@ -169,12 +169,12 @@
     "value": 3282740,
     "source_url": "https://pypi.org/project/qdrant-client/",
     "comment": "",
-    "value_90_days": 43516636
+    "value_90_days": 58815450
   },
   "npm_downloads": {
-    "value": 512276,
+    "value": 568577,
     "source_url": "https://www.npmjs.com/package/@qdrant/js-client-grpc",
     "comment": "",
-    "value_90_days": 143952
+    "value_90_days": 173424
   }
 }
