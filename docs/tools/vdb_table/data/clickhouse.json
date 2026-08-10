@@ -149,7 +149,7 @@
     "comment": ""
   },
   "github_stars": {
-    "value": 49019,
+    "value": 49143,
     "source_url": "https://github.com/ClickHouse/ClickHouse",
     "comment": "",
     "value_90_days": 0
@@ -164,12 +164,12 @@
     "value": 184548,
     "source_url": "https://pypi.org/project/clickhouse/",
     "comment": "",
-    "value_90_days": 6405
+    "value_90_days": 6318
   },
   "npm_downloads": {
-    "value": 80379254,
+    "value": 82749317,
     "source_url": "https://www.npmjs.com/package/@clickhouse/client",
     "comment": "",
-    "value_90_days": 28281007
+    "value_90_days": 29890992
   }
 }
