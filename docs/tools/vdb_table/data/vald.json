@@ -164,12 +164,12 @@
     "value": 218612,
     "source_url": "https://pypi.org/project/vald-client-python/",
     "comment": "",
-    "value_90_days": 4520
+    "value_90_days": 3588
   },
   "npm_downloads": {
-    "value": 3179,
+    "value": 3198,
     "source_url": "https://www.npmjs.com/package/vald-client-node",
     "comment": "",
-    "value_90_days": 671
+    "value_90_days": 652
   }
 }

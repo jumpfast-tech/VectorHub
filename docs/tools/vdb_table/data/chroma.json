@@ -164,12 +164,12 @@
     "value": 8948550,
     "source_url": "https://pypi.org/project/chromadb/",
     "comment": "",
-    "value_90_days": 39976985
+    "value_90_days": 39352506
   },
   "npm_downloads": {
-    "value": 8744991,
+    "value": 8953766,
     "source_url": "https://www.npmjs.com/package/chromadb",
     "comment": "",
-    "value_90_days": 2529594
+    "value_90_days": 2603137
   }
 }
