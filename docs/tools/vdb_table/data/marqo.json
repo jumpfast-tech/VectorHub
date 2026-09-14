@@ -164,12 +164,12 @@
     "value": 135869,
     "source_url": "https://pypi.org/project/marqo/",
     "comment": "",
-    "value_90_days": 174298
+    "value_90_days": 170376
   },
   "npm_downloads": {
     "value": 679,
     "source_url": "https://www.npmjs.com/package/marqo",
     "comment": "",
-    "value_90_days": 52
+    "value_90_days": 48
   }
 }
