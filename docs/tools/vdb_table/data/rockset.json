@@ -164,12 +164,12 @@
     "value": 2119617,
     "source_url": "https://pypi.org/project/rockset/",
     "comment": "",
-    "value_90_days": 338986
+    "value_90_days": 333781
   },
   "npm_downloads": {
-    "value": 4785,
+    "value": 5443,
     "source_url": "https://www.npmjs.com/package/rockset",
     "comment": "",
-    "value_90_days": 1765
+    "value_90_days": 2268
   }
 }
