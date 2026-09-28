@@ -149,7 +149,7 @@
     "comment": ""
   },
   "github_stars": {
-    "value": 11489,
+    "value": 11548,
     "source_url": "https://github.com/lancedb/lancedb",
     "comment": "",
     "value_90_days": 0
@@ -164,12 +164,12 @@
     "value": 508174,
     "source_url": "https://pypi.org/project/lancedb/",
     "comment": "",
-    "value_90_days": 30342414
+    "value_90_days": 30575645
   },
   "npm_downloads": {
-    "value": 1002474,
+    "value": 989566,
     "source_url": "https://www.npmjs.com/package/@lancedb/vectordb-linux-x64-gnu",
     "comment": "",
-    "value_90_days": 130793
+    "value_90_days": 113275
   }
 }
