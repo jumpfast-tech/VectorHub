@@ -169,12 +169,12 @@
     "value": 3282740,
     "source_url": "https://pypi.org/project/qdrant-client/",
     "comment": "",
-    "value_90_days": 45693821
+    "value_90_days": 44384049
   },
   "npm_downloads": {
-    "value": 1045133,
+    "value": 1068236,
     "source_url": "https://www.npmjs.com/package/@qdrant/js-client-grpc",
     "comment": "",
-    "value_90_days": 282703
+    "value_90_days": 372260
   }
 }
