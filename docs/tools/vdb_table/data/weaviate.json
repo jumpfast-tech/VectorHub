@@ -149,7 +149,7 @@
     "comment": ""
   },
   "github_stars": {
-    "value": 16892,
+    "value": 16916,
     "source_url": "https://github.com/weaviate/weaviate",
     "comment": "",
     "value_90_days": 0
@@ -164,7 +164,7 @@
     "value": 7376582,
     "source_url": "https://pypi.org/project/weaviate-client/",
     "comment": "",
-    "value_90_days": 170533825
+    "value_90_days": 127303798
   },
   "npm_downloads": {
     "value": 27149825,
