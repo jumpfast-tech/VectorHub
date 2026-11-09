@@ -155,7 +155,7 @@
     "value_90_days": 0
   },
   "docker_pulls": {
-    "value": 20448655,
+    "value": 20478070,
     "source_url": "https://hub.docker.com/_/crate",
     "comment": "",
     "value_90_days": 0
@@ -164,12 +164,12 @@
     "value": 1210328,
     "source_url": "https://pypi.org/project/crate/",
     "comment": "",
-    "value_90_days": 402761
+    "value_90_days": 416468
   },
   "npm_downloads": {
-    "value": 110152,
+    "value": 111380,
     "source_url": "https://www.npmjs.com/package/node-crate",
     "comment": "",
-    "value_90_days": 11514
+    "value_90_days": 12200
   }
 }
