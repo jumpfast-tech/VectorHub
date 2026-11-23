@@ -164,12 +164,12 @@
     "value": 783215,
     "source_url": "https://pypi.org/project/redisearch/",
     "comment": "",
-    "value_90_days": 37129
+    "value_90_days": 40984
   },
   "npm_downloads": {
-    "value": 551577445,
+    "value": 572546981,
     "source_url": "https://www.npmjs.com/package/@redis/search",
     "comment": "",
-    "value_90_days": 174097471
+    "value_90_days": 187040234
   }
 }
